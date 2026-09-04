@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Login</title>
+<!DOCTYPE html>
+</head>
+<body>
+
+    <h2>Login</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <div>
+            <label>a</label><br>
+            <input type="text" name="a" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>b</label><br>
+            <input type="text" name="b" required>
+        </div>
+
+        <br>
+
+        <button type="submit">squareroot</button>
+    </form>
+    <p>{{a}}</p>
+    <p>{{b}}</p>
+    <p>{{c}}</p>
+    <p>{{d}}</p>
+
+    <p>
+        Don't have an account?
+        <a href="{% url 'signup' %}">Signup</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - VideoSnap</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:50px auto;
+            background:#fff;
+            padding:40px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+        }
+
+        h1{
+            text-align:center;
+            color:#007BFF;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#666;
+            margin-bottom:40px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#f8f9fa;
+            padding:25px;
+            border-radius:8px;
+            border-left:5px solid #007BFF;
+        }
+
+        .card h3{
+            color:#222;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:#555;
+            line-height:1.7;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:35px;
+            padding:12px 24px;
+            background:#007BFF;
+            color:#fff;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Help Center</h1>
+
+    <p class="subtitle">
+        Find guides and solutions to use VideoSnap more effectively.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Create an Account</h3>
+            <p>
+                Learn how to register and start using VideoSnap in just a few steps.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Login Issues</h3>
+            <p>
+                Having trouble signing in? Find solutions for common login problems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Upload Videos</h3>
+            <p>
+                Learn how to upload, manage, and organize your videos securely.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Account Settings</h3>
+            <p>
+                Update your profile, password, and account preferences easily.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Privacy & Security</h3>
+            <p>
+                Learn how VideoSnap protects your account and personal information.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Need More Help?</h3>
+            <p>
+                Visit our Contact page or submit a support request for further assistance.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="{% url 'home' %}" class="btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+</body>
+</html>

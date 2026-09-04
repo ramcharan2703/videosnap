@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - VideoSnap</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:50px auto;
+            background:#fff;
+            padding:40px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+        }
+
+        h1{
+            text-align:center;
+            color:#007BFF;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#666;
+            margin-bottom:40px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#f8f9fa;
+            padding:25px;
+            border-radius:8px;
+            border-left:5px solid #007BFF;
+        }
+
+        .card h3{
+            margin-bottom:10px;
+            color:#222;
+        }
+
+        .card p{
+            color:#555;
+            line-height:1.7;
+        }
+
+        .contact-box{
+            margin-top:40px;
+            padding:25px;
+            background:#eef6ff;
+            border-radius:8px;
+            text-align:center;
+        }
+
+        .contact-box h2{
+            color:#007BFF;
+            margin-bottom:15px;
+        }
+
+        .contact-box p{
+            line-height:1.8;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:12px 24px;
+            background:#007BFF;
+            color:#fff;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Support</h1>
+
+    <p class="subtitle">
+        We're here to help you. Find quick solutions or contact our support team.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🔐 Account Support</h3>
+            <p>
+                Get help with login issues, password recovery, and account access.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📹 Video Support</h3>
+            <p>
+                Learn how to upload, edit, manage, or delete your videos.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⚙ Technical Support</h3>
+            <p>
+                Facing bugs or technical problems? Our team is ready to assist.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💳 Billing Support</h3>
+            <p>
+                Need help with subscriptions or payments? Contact our billing team.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h2>Need More Assistance?</h2>
+
+        <p>
+            📧 Email: support@videosnap.com
+        </p>
+
+        <p>
+            📞 Phone: +91 98765 43210
+        </p>
+
+        <p>
+            🕒 Monday - Saturday | 9:00 AM - 6:00 PM
+        </p>
+
+    </div>
+
+    <a href="{% url 'home' %}" class="btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+</body>
+</html>

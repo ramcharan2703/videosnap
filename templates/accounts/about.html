@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - VideoSnap</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+        }
+
+        .container{
+            width:90%;
+            max-width:900px;
+            margin:50px auto;
+            background:#fff;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.15);
+            padding:40px;
+        }
+
+        h1{
+            text-align:center;
+            color:#222;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#666;
+            margin-bottom:35px;
+        }
+
+        .contact-info{
+            display:flex;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            margin-bottom:35px;
+        }
+
+        .card{
+            width:30%;
+            min-width:220px;
+            background:#f8f9fa;
+            padding:20px;
+            border-radius:8px;
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .card h3{
+            color:#007BFF;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:#555;
+            line-height:1.6;
+        }
+
+        form{
+            margin-top:20px;
+        }
+
+        label{
+            display:block;
+            margin:15px 0 5px;
+            font-weight:bold;
+        }
+
+        input,
+        textarea{
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        textarea{
+            resize:vertical;
+        }
+
+        button{
+            width:100%;
+            margin-top:20px;
+            padding:12px;
+            border:none;
+            border-radius:5px;
+            background:#007BFF;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+
+        .back{
+            display:block;
+            text-align:center;
+            margin-top:25px;
+            text-decoration:none;
+            color:#007BFF;
+            font-weight:bold;
+        }
+
+        .back:hover{
+            text-decoration:underline;
+        }
+
+        @media(max-width:768px){
+            .contact-info{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            .card{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Contact Us</h1>
+
+    <p class="subtitle">
+        We'd love to hear from you. Send us your questions, feedback, or suggestions.
+    </p>
+
+    <div class="contact-info">
+
+        <div class="card">
+            <h3>📍 Address</h3>
+            <p>
+                VideoSnap Headquarters<br>
+                Hyderabad, Telangana<br>
+                India
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📧 Email</h3>
+            <p>
+                support@videosnap.com<br>
+                contact@videosnap.com
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📞 Phone</h3>
+            <p>
+                +91 98765 43210<br>
+                Mon - Sat (9 AM - 6 PM)
+            </p>
+        </div>
+
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Subject</label>
+        <input type="text" name="subject" placeholder="Enter subject" required>
+
+        <label>Your Message</label>
+        <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <a href="{% url 'home' %}" class="back">← Back to Home</a>
+
+</div>
+
+</body>
+</html>

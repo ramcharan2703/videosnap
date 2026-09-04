@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            margin:40px;
+        }
+
+        .container{
+            width:80%;
+            margin:auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            padding:12px;
+            border-bottom:1px solid #ddd;
+            text-align:center;
+        }
+
+        th{
+            background:#007bff;
+            color:white;
+        }
+
+        img{
+            width:80px;
+            border-radius:5px;
+        }
+
+        .total{
+            margin-top:20px;
+            text-align:right;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 20px;
+            background:#28a745;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#218838;
+        }
+
+        .empty{
+            text-align:center;
+            font-size:20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>My Shopping Cart</h1>
+
+{% if items %}
+
+<table>
+
+<tr>
+    <th>Image</th>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+</tr>
+
+{% for item in items %}
+
+<tr>
+
+    <td>
+        {% if item.product.image %}
+            <img src="{{ item.product.image.url }}" alt="">
+        {% endif %}
+    </td>
+
+    <td>{{ item.product.name }}</td>
+
+    <td>₹{{ item.product.price }}</td>
+
+    <td>{{ item.quantity }}</td>
+
+    <td>₹{{ item.total_price }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<div class="total">
+    Grand Total : ₹{{ total }}
+</div>
+
+{% else %}
+
+<p class="empty">🛒 Your cart is empty.</p>
+
+{% endif %}
+
+<a href="{% url 'products' %}" class="btn">
+    Continue Shopping
+</a>
+
+</div>
+
+</body>
+</html>

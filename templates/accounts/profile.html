@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+
+    <h1>My Profile</h1>
+
+    {% if profile.profile_picture %}
+        <img src="{{ profile.profile_picture.url }}" width="150">
+    {% else %}
+        <p>No profile picture.</p>
+    {% endif %}
+
+    <h2>{{ request.user.username }}</h2>
+
+    <p><strong>Bio:</strong> {{ profile.bio }}</p>
+
+    <p><strong>Location:</strong> {{ profile.location }}</p>
+
+    <a href="{% url 'edit_profile' %}">Edit Profile</a>
+
+</body>
+</html>

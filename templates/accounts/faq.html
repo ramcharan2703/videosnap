@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - VideoSnap</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            color:#333;
+        }
+
+        .container{
+            width:90%;
+            max-width:900px;
+            margin:50px auto;
+            background:#fff;
+            padding:40px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+        }
+
+        h1{
+            text-align:center;
+            color:#007BFF;
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#777;
+            margin-bottom:35px;
+        }
+
+        .faq{
+            margin-bottom:25px;
+            padding:20px;
+            border-left:5px solid #007BFF;
+            background:#f8f9fa;
+            border-radius:5px;
+        }
+
+        .faq h3{
+            color:#222;
+            margin-bottom:10px;
+        }
+
+        .faq p{
+            color:#555;
+            line-height:1.7;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 24px;
+            background:#007BFF;
+            color:#fff;
+            text-decoration:none;
+            border-radius:5px;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Frequently Asked Questions</h1>
+
+    <p class="subtitle">
+        Find answers to the most common questions about VideoSnap.
+    </p>
+
+    <div class="faq">
+        <h3>1. What is VideoSnap?</h3>
+        <p>
+            VideoSnap is a platform where users can upload, organize,
+            and manage videos securely.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>2. Is VideoSnap free?</h3>
+        <p>
+            Yes. Most features are available for free. Premium features
+            may be introduced in the future.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>3. Do I need an account?</h3>
+        <p>
+            You can browse public pages without an account, but uploading
+            and managing videos requires registration.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>4. Can I upload any video?</h3>
+        <p>
+            You may upload videos that you own or have permission to use.
+            Content that violates our policies may be removed.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>5. How do I reset my password?</h3>
+        <p>
+            Click the "Forgot Password" option on the Login page and follow
+            the instructions.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>6. How do I contact support?</h3>
+        <p>
+            Visit our Contact page and submit the contact form. Our team
+            will respond as soon as possible.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>7. Is my data secure?</h3>
+        <p>
+            Yes. We use industry-standard security practices to help protect
+            your account and uploaded content.
+        </p>
+    </div>
+
+    <div class="faq">
+        <h3>8. Can I delete my account?</h3>
+        <p>
+            Yes. You can request account deletion through your profile
+            settings or by contacting support.
+        </p>
+    </div>
+
+    <a href="{% url 'home' %}" class="btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+</body>
+</html>

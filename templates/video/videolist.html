@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Feed</title>
+</head>
+<body>
+
+<h1>Video Feed</h1>
+
+<a href="{% url 'upload_video' %}">Upload New Video</a>
+
+<hr>
+
+{% for video in videos %}
+
+    <h3>{{ video.user.username }}</h3>
+
+    <p>{{ video.caption }}</p>
+
+    <video width="500" controls>
+        <source src="{{ video.video.url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <p>{{ video.created_at }}</p>
+
+    <hr>
+
+{% empty %}
+
+    <h3>No videos uploaded yet.</h3>
+
+{% endfor %}
+
+</body>
+</html>{% for video in videos %}
+
+<h2>{{ video.title }}</h2>
+
+<p>{{ video.description }}</p>
+
+<video width="600" controls>
+    <source src="{{ video.video.url }}">
+</video>
+
+<p>Views: {{ video.views }}</p>
+
+<hr>
+
+{% empty %}
+
+<h3>No videos uploaded.</h3>
+
+{% endfor %}

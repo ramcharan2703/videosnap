@@ -1,0 +1,35 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label>Title</label><br>
+    <input type="text" name="title" required>
+
+    <br><br>
+
+    <label>Description</label><br>
+    <textarea name="description" rows="5"></textarea>
+
+    <br><br>
+
+    <label>Thumbnail</label><br>
+    <input type="file" name="thumbnail" accept="image/*">
+
+    <br><br>
+
+    <label>Video</label><br>
+    <input type="file" name="video" accept="video/*" required>
+
+    <br><br>
+
+    <label>Status</label><br>
+    <select name="status">
+        <option value="public">Public</option>
+        <option value="private">Private</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Upload Video
+    </button>
+</form>

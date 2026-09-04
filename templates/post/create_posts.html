@@ -1,0 +1,17 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <input type="text" name="title_html" placeholder="Enter Title">
+
+    <br><br>
+
+    <textarea name="content_html" placeholder="Enter Content"></textarea>
+
+    <br><br>
+
+    <input type="file" name="images" multiple>
+
+    <br><br>
+
+    <button type="submit">Create Post</button>
+</form>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+</head>
+<body>
+
+<h1>{{ product.name }}</h1>
+
+{% if product.image %}
+    <img src="{{ product.image.url }}" width="300">
+{% endif %}
+
+<p>{{ product.description }}</p>
+
+<h3>₹{{ product.price }}</h3>
+
+<a href="{% url 'add_to_cart' product.id %}">
+    <button>Add to Cart</button>
+</a>
+
+<br><br>
+
+<a href="{% url 'products' %}">Back to Products</a>
+
+</body>
+</html>

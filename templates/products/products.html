@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+
+<h1>All Products</h1>
+
+{% for product in products %}
+    <div style="border:1px solid #ccc;padding:15px;margin:15px;">
+
+        {% if product.image %}
+            <img src="{{ product.image.url }}" width="200">
+        {% endif %}
+
+        <h2>{{ product.name }}</h2>
+
+        <p>{{ product.description }}</p>
+
+        <h3>₹{{ product.price }}</h3>
+
+        <a href="{% url 'product_detail' product.id %}">
+            View Details
+        </a>
+
+    </div>
+{% empty %}
+    <p>No products available.</p>
+{% endfor %}
+
+</body>
+</html>
